@@ -51,4 +51,4 @@ $ docker run --rm --name reactapp \
 3. Test that your app is running on port 3000 in local browser at http://localhost:3000 and you should see the default screen but the values match ENV variable values passed in your run command.
 
 # Congratulations
-If you made it this far, then you have successfully extended `create-react-app` to use environment variables and added a Docker image that allows you to configure your application dynamically to run anywhere!
+If you made it this far, then you have successfully create a React app with `create-react-app` and added a Docker image that allows you to configure your application dynamically to run anywhere!

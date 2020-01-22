@@ -49,7 +49,7 @@ $ docker run --rm --name reactapp \
     reactapp
 ```
 
-**Without** the *anonymous* volume ('/app/node_modules'), the node_modules directory would be overwritten by the mounting of the host directory at runtime. An anonymous volume is useful for when you would rather have Docker handle where the files are stored. In other words, this would happen:
+Notice that the argument `-v /app/node_modules` does not specify a name for the volume, which means that this is an *anonymous* volume. **Without** the *anonymous* volume ('/app/node_modules'), the node_modules directory would be overwritten by the mounting of the host directory at runtime. An anonymous volume is useful for when you would rather have Docker handle where the files are stored. In other words, this would happen:
 
 1. Build - The node_modules directory is created in the image.
 2. Run - The current directory is mounted into the container, overwriting the `node_modules` that were installed during the build.

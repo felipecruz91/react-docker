@@ -27,7 +27,7 @@ npm start
 Your browser will likely launch a window or tab for `http://localhost:3000` and you should see a React icon and welcome screen. If everything is running, then `CTRL + C` to stop the app and proceed. If it is not working, visit create-react-app's website for instructions and troubleshooting tips for your environment.
 
 # Add Docker container
-If you tested the app above, and the values you set in your local environment appear, then proceed to package your app in a container.
+Let's proceed to package your app in a container.
 
 ## Create Docker image and run script
 Add `Dockerfile` as example in this repository

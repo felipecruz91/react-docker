@@ -1,5 +1,5 @@
-# React Docker Tutorial
-This repository demonstrates how to bootstrap a React app using `create-react-app` and run it as a Docker container. The goal is allowing you to package and deploy your app to anywhere.
+# React Docker Tutorial (Development version)
+This repository demonstrates how to bootstrap a React app using `create-react-app` and run it as a Docker container. The goal is allowing you to package and run your app in a container to improve your development process!
 
 # Requirements
 ## NodeJS version 6 or later

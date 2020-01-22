@@ -42,11 +42,19 @@ $ docker build -t reactapp .
 2. Run container
 ```
 $ docker run --rm --name reactapp \
-    -v $(pwd):/app -v /app/node_modules \
+    -v $(pwd):/app \
+    -v /app/node_modules \
     -p 3000:3000 \
     -e CHOKIDAR_USEPOLLING=true \
     reactapp
 ```
+
+**Without** the *anonymous* volume ('/app/node_modules'), the node_modules directory would be overwritten by the mounting of the host directory at runtime. An anonymous volume is useful for when you would rather have Docker handle where the files are stored. In other words, this would happen:
+
+1. Build - The node_modules directory is created in the image.
+2. Run - The current directory is mounted into the container, overwriting the `node_modules` that were installed during the build.
+
+`Chokidar` is a fast open-source file watcher for NodeJS. You give it a bunch of files, it watches them for changes and notifies you every time an old file is edited; or a new file is created. You need to set the `CHOKIDAR_USEPOLLING` env. variable to `true` if you want warm reloading enabled.
 
 3. Test that your app is running on port 3000 in local browser at http://localhost:3000 and you should see the default React screen. Change your source code to make sure the warm reloading works!
 
